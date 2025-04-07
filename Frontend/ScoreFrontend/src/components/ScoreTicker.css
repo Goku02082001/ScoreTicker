@@ -1,0 +1,347 @@
+/* ScoreTicker Card Styles */
+.score-ticker-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    max-width: 600px;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 320px); /* Adjust width for spacing between cards */
+}
+
+/* Run Buttons Card Styles */
+.run-buttons-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 450px; /* Fixed width for the run buttons card */
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px; /* Space between the score card and run buttons card */
+    border: 2px solid #e0e0e0; /* Border added around the run buttons card */
+}
+
+/* Header Styles */
+.score-ticker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.score-ticker-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Badge Styles */
+.live-badge {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.live-badge:hover {
+    background-color: #218838;
+}
+
+/* Content Styles */
+.score-ticker-content {
+    margin-top: 20px;
+}
+
+/* Score Display Styles */
+.score-display {
+    font-size: 2.2rem;
+    color: #333;
+    text-align: center;
+}
+
+.overs-display {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.last-updated {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Batsmen Info Styles */
+.batsmen-info {
+    margin-top: 20px;
+}
+
+/* Section Title Styles */
+.section-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Table Styles */
+.batsman-table, .bowler-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.batsman-table th, .bowler-table th {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.batsman-table td, .bowler-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+/* Adjusted styles for batsmen data alignment */
+.batsman-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.batsman-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.batsman-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.batsman-runs, .batsman-fours, .batsman-sixes {
+    font-size: 1rem;
+}
+
+/* Bowler Info Styles */
+.bowler-info {
+    margin-top: 20px;
+}
+
+/* Action Buttons Styles */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.action-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.reset-button {
+    background-color: #dc3545;
+}
+
+.reset-button:hover {
+    background-color: #c82333;
+}
+
+/* Run Buttons Styles */
+.run-button {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 12px; /* Smaller padding for a smaller button */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2rem; /* Font size remains the same */
+    width: 50px; /* Reduced width for smaller button */
+    height: 50px; /* Equal height to create a circle */
+    margin: 5px; /* Reduced margin for compact layout */
+    display: inline-block;
+    text-align: center;
+}
+
+.run-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Run Buttons Container (Ensure all buttons are in one row) */
+.run-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Space between the buttons */
+    padding: 10px;
+}
+
+/* Border for the table containing the buttons */
+.run-buttons-container table {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+}
+
+/* Add border to table cells */
+.run-buttons-container td {
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.tooltip.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.run-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hoverable Buttons */
+.run-button {
+    position: relative;
+}
+
+.run-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .score-ticker-card {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .score-ticker-title {
+        font-size: 1.4rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .action-button {
+        margin-bottom: 10px;
+    }
+
+    .score-display {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    /* Adjusted padding for table cells */
+    .batsman-table th, .batsman-table td, .bowler-table th, .bowler-table td {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    /* Improved table spacing */
+    .batsman-table, .bowler-table {
+        margin-bottom: 20px;
+    }
+
+    /* Increase font size for batsman and bowler data for smaller screens */
+    .batsman-name, .batsman-runs, .batsman-fours, .batsman-sixes, .last-updated {
+        font-size: 0.95rem;
+    }
+
+    /* Improved section title spacing */
+    .section-title {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust button font size for clarity */
+    .action-button, .reset-button {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+}
+
+/* Additional styles for better layout */
+.batsman-table th, .batsman-table td {
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+.bowler-table th, .bowler-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* Ensure layout consistency for tables on smaller screens */
+.batsman-table th, .batsman-table td, .bowler-table th, .bowler-table td {
+    font-size: 0.85rem;
+    padding: 8px;
+}
+
+.batsman-table, .bowler-table {
+    margin-bottom: 20px;
+}
+
+.batsman-name, .batsman-runs, .batsman-fours, .batsman-sixes, .last-updated {
+    font-size: 0.95rem;
+}
+
+/* Improve section title spacing */
+.section-title {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* Adjust button font size for clarity */
+.action-button, .reset-button {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+}

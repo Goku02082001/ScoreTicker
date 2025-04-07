@@ -1,0 +1,19 @@
+/* Badge.css */
+.badge {
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-right: 0.5em; /* Adds space between badges */
+  }
+  
+  .badge-primary {
+    background-color: #007bff; /* Blue color */
+    color: white;
+  }
+  
+  .badge-secondary {
+    background-color: #6c757d; /* Gray color */
+    color: white;
+  }
+  
