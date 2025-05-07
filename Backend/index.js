@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://score-ticker-cm2m.vercel.app", // Frontend URL
+    origin: "https://score-ticker-cm2m.vercel.app", 
     methods: ["GET", "POST"]
   }
 });
@@ -17,7 +17,7 @@ const io = new Server(server, {
 app.use(cors({ origin: "https://score-ticker-cm2m.vercel.app", methods: ["GET", "POST"] }));
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://gauravroy:gaurav02@cluster0.v5zx1.mongodb.net/myApp?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://shyamolroy12353:Gaurav02@cluster0.5vkc2jw.mongodb.net/")
   .then(() => console.log("Connected to MongoDB"))
   .catch(error => console.error("MongoDB connection error:", error));
 
@@ -47,7 +47,6 @@ app.post('/add-players', async (req, res) => {
   }
 });
 
-// Set teams and match details
 app.post('/set-teams', async (req, res) => {
   const { teamA, teamB, tossWinner, tossChoice, overs } = req.body;
 
@@ -100,10 +99,6 @@ app.post('/add-dismissal', async (req, res) => {
   }
 });
 
-app.post((res,req)=>{
-  const{emai,password}=req.body;
-  
-})
 
 // Socket.io connection and initial data fetch
 io.on('connection', async (socket) => {
