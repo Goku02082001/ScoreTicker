@@ -10,12 +10,12 @@ app.use(express.json())
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://score-ticker-l28i.vercel.app/", 
+    origin: "https://score-ticker-l28i.vercel.app", 
     methods: ["GET", "POST"]
   }
 });
 
-app.use(cors({ origin: "https://score-ticker-l28i.vercel.app/", methods: ["GET", "POST"] }));
+app.use(cors({ origin: "https://score-ticker-l28i.vercel.app", methods: ["GET", "POST"] }));
 app.use(express.json());
 
 mongoose.connect("mongodb+srv://shyamolroy12353:Gaurav02@cluster0.5vkc2jw.mongodb.net/")
