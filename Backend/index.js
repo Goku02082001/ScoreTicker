@@ -17,11 +17,10 @@ const io = new Server(server, {
 app.use(cors({ origin: "https://score-ticker-cm2m.vercel.app", methods: ["GET", "POST"] }));
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://shyamolroy12353:Gaurav02@cluster0.5vkc2jw.mongodb.net/")
+mongoose.connect("mongodb+srv://shyamolroy12353:Gaurav02@cluster0.5vkc2jw.mongodb.net/score-ticker")
   .then(() => console.log("Connected to MongoDB"))
   .catch(error => console.error("MongoDB connection error:", error));
 
-// Add or update players
 app.post('/add-players', async (req, res) => {
   const { striker, nonStriker, bowler } = req.body;
 
