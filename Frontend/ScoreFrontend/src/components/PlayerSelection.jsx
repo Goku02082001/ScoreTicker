@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
 
-const socket = io('https://scoreticker-1.onrender.com');
+const socket = io('https://scoreticker-6.onrender.com');
 
 const PlayerSelection = () => {
   const [playerName, setPlayerName] = useState('');
@@ -81,7 +81,7 @@ const PlayerSelection = () => {
     }
   
     try {
-      const response = await fetch('https://scoreticker-1.onrender.com/add-players', {
+      const response = await fetch('https://scoreticker-6.onrender.com/add-players', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ striker, nonStriker, bowler }),

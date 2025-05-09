@@ -38,7 +38,7 @@ const TeamSelection = () => {
     localStorage.setItem('teamB', trimmedTeamB);
     localStorage.setItem('overs', overs);
 
-    await fetch('https://scoreticker-1.onrender.com/set-teams', {
+    await fetch('https://scoreticker-6.onrender.com/set-teams', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

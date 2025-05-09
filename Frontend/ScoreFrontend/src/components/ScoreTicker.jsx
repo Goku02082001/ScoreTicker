@@ -6,7 +6,7 @@ import { CardContent, CardTitle, CardHeader, Card } from './ui/card/Card';
 import Badge from './ui/card/table/badge/Badge';
 import './ScoreTicker.css';
 import { useNavigate } from 'react-router-dom';
-const socket = io('https://scoreticker-1.onrender.com');
+const socket = io('https://scoreticker-6.onrender.com');
 
 const ScoreTicker = () => {
   const navigate = useNavigate(); 
@@ -364,7 +364,7 @@ const ScoreTicker = () => {
     const playerSixes = dismissedBatsman?.sixes || 0;
   
     // Send dismissal details to the backend
-    fetch('https://scoreticker-1.onrender.com/add-dismissal', {
+    fetch('https://scoreticker-6.onrender.com/add-dismissal', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
