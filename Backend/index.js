@@ -1,4 +1,4 @@
-const express = require('express');
+const express=require('express')
 const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
@@ -18,7 +18,7 @@ const io = new Server(server, {
 app.use(cors({ origin: "https://score-ticker-cm2m.vercel.app", methods: ["GET", "POST"] }));
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://shyamolroy12353:Gaurav02@cluster0.5vkc2jw.mongodb.net/score-ticker")
+mongoose.connect("mongodb+srv://shyamolroy12353:Gaurav02@cluster0.5vkc2jw.mongodb.net/")
   .then(() => console.log("Connected to MongoDB"))
   .catch(error => console.error("MongoDB connection error:", error));
 
