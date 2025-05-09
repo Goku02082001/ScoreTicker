@@ -26,8 +26,8 @@ const PlayerSelection = () => {
     };
   }, []);
 
-  const validatePlayerName = (name) => /^[a-zA-Z\s]+$/.test(name); // Only letters and spaces
-  const validateBowlerName = (name) => /^[a-zA-Z\s]+$/.test(name); // Only letters and spaces
+  const validatePlayerName = (name) => /^[a-zA-Z\s]+$/.test(name); 
+  const validateBowlerName = (name) => /^[a-zA-Z\s]+$/.test(name); 
 
   const addPlayerName = () => {
     if (playerName.trim() && validatePlayerName(playerName)) {
